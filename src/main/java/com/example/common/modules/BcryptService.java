@@ -1,8 +1,7 @@
-package com.example.common.utils;
+package com.example.common.modules;
 
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @RequiredArgsConstructor

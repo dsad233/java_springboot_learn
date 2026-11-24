@@ -1,5 +1,6 @@
-package com.example.common.utils;
+package com.example.common.configs;
 
+import com.example.common.modules.BcryptService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
