@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: post
+
+  config:
+    import: optional:file:.env[.properties]
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+
+  jpa:
+    #true 설정 시 jpa 쿼리문 확인 가능
+    show-sql: ${DB_SHOW_SQL}
+    hibernate:
+      #DDL 정의시 DB의 고유 기능을 사용 가능
+      ddl-auto: ${DB_DDL_AUTO}
+    properties:
+      hibernate:
+        # JPA의 구현체인 Hibernate가 동작하면서 발생한 SQL의 가독성을 높여줌
+        format_sql: ${DB_FORMAT_SQL}
