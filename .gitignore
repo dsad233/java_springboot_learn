@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# 환경 설정 파일 제한
+.env
+.env.dev
+.env.prod
