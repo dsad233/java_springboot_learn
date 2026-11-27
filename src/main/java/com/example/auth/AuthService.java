@@ -2,7 +2,9 @@ package com.example.auth;
 
 import com.example.common.libs.entities.User;
 import com.example.common.modules.BcryptService;
-import com.example.auth.dto.CreateUserDto;
+import com.example.auth.dto.request.CreateUserDto;
+import com.example.common.modules.JwtService;
+import com.example.common.modules.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.example.auth;
 
 import com.example.common.dto.ResponseDto;
-import com.example.auth.dto.CreateUserDto;
+import com.example.auth.dto.request.CreateUserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
