@@ -1,5 +1,6 @@
 package com.example.auth;
 
+import com.example.auth.dto.request.SigninDto;
 import com.example.common.dto.ResponseDto;
 import com.example.auth.dto.request.CreateUserDto;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,19 @@ public class AuthController {
         ResponseDto responseDto = new ResponseDto();
         responseDto.setStatusCode(HttpStatus.CREATED.value());
         responseDto.setMessage("success");
+        return ResponseEntity.ok().body(responseDto);
+    }
+
+    // 로그인
+    @PostMapping("signin")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ResponseDto> login(@RequestBody SigninDto signinDto) {
+        String login = this.authService.login(signinDto);
+
+        ResponseDto responseDto = new ResponseDto();
+        responseDto.setStatusCode(HttpStatus.CREATED.value());
+        responseDto.setMessage("success");
+        responseDto.setData(login);
         return ResponseEntity.ok().body(responseDto);
     }
 }
